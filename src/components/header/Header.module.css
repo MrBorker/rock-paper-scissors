@@ -1,0 +1,11 @@
+.root {
+  width: 700px;
+  height: 150px;
+  border: 2px solid var(--color-gray-500);
+  margin-bottom: 50px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}

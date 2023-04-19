@@ -1,11 +1,12 @@
 import "./reset.css";
 import "./App.css";
 import { useState } from "react";
-import { Modal, GameArea } from "./components";
+import { Header, GameArea } from "./components";
 
 function App() {
   return (
     <div className="root">
+      <Header />
       <GameArea />
     </div>
   );

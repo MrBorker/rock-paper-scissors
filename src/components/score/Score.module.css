@@ -1,0 +1,23 @@
+.root {
+  padding: 15px 30px 10px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-gray-100);
+  border-radius: 10px;
+}
+
+.note {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-blue-500);
+  letter-spacing: 2px;
+}
+
+.value {
+  font-size: 64px;
+  font-weight: 700;
+  color: var(--color-gray-600);
+}
