@@ -1,10 +1,18 @@
 import styles from "./Option.module.css";
-import { themes } from "../../constants/rootConstants";
 
-function Option({ theme }) {
-  console.log(theme);
+function Option({ theme, size, state, onClick }) {
+  const handleClick = () => {
+    onClick && onClick(theme);
+  };
 
-  return <button className={`${styles["btn"]} ${styles[theme]}`}></button>;
+  return (
+    <button
+      className={`${styles["btn"]} ${styles[theme]} ${styles[size]} ${
+        styles[state] || ""
+      }`}
+      onClick={handleClick}
+    ></button>
+  );
 }
 
 export { Option };

@@ -1,0 +1,17 @@
+.picked-card {
+  height: 70%;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.picked-title {
+  text-transform: uppercase;
+  color: var(--color-gray-100);
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}

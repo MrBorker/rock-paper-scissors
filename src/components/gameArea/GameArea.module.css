@@ -1,10 +1,12 @@
 .root {
   height: 500px;
-  width: 700px;
-  border: 1px solid white;
+  width: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.options-container {
+.start-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -14,13 +16,14 @@
   position: relative;
   z-index: 1;
   height: 100%;
+  width: 100%;
 }
 
-.options-container button:last-child {
+.start-container button:last-child {
   grid-column: 1/-1;
 }
 
-.options-container::after {
+.start-container::after {
   content: "";
   position: absolute;
   background-image: url("../../assets/bg-triangle.svg");
@@ -28,4 +31,14 @@
   height: 280px;
   background-repeat: no-repeat;
   z-index: -3;
+}
+
+.picked-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
