@@ -1,5 +1,6 @@
 .result-container {
   height: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +9,7 @@
 
 .result-title {
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--color-gray-100);
   font-size: 48px;
   font-weight: 800;
@@ -17,10 +19,27 @@
 
 .result-button {
   text-transform: uppercase;
+  white-space: nowrap;
+  width: 80%;
+  max-width: 300px;
   color: var(--color-blue-900);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: 1.5px;
-  padding: 15px 70px;
+  padding: 15px 0px;
   border-radius: 10px;
+}
+
+/**************** RESPONSIVE *****************/
+
+@media screen and (max-width: 850px) {
+  .result-container {
+    order: 3;
+    height: auto;
+  }
+
+  .result-button {
+    font-size: 16px;
+    width: 200px;
+  }
 }

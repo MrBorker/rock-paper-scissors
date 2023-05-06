@@ -11,3 +11,11 @@
   line-height: 0.9;
   letter-spacing: 0px;
 }
+
+/**************** RESPONSIVE *****************/
+
+@media screen and (max-width: 430px) {
+  .btn {
+    font-size: 28px;
+  }
+}

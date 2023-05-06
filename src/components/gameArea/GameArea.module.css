@@ -1,9 +1,10 @@
 .root {
-  height: 500px;
-  width: 900px;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-grow: 1;
 }
 
 .start-container {
@@ -17,6 +18,7 @@
   z-index: 1;
   height: 100%;
   width: 100%;
+  max-width: 600px;
 }
 
 .start-container button:last-child {
@@ -37,8 +39,26 @@
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: start;
-  justify-content: space-between;
-  width: 100%;
+  align-items: center;
+  justify-content: center;
   height: 100%;
+  width: 100%;
+  max-width: 900px;
+}
+
+/**************** RESPONSIVE *****************/
+
+@media screen and (max-width: 850px) {
+  .picked-container {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .start-container::after {
+    height: 70%;
+  }
+  .start-container {
+    height: 300px;
+  }
 }

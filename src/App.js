@@ -10,8 +10,10 @@ function App() {
   return (
     <ScoreContext.Provider value={{ score }}>
       <div className="root">
-        <Header />
-        <GameArea setScore={setScore} score={score} />
+        <div className="content-wrapper">
+          <Header />
+          <GameArea setScore={setScore} score={score} />
+        </div>
       </div>
     </ScoreContext.Provider>
   );
