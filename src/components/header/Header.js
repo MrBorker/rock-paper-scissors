@@ -1,11 +1,11 @@
 import style from "./Header.module.css";
-import { Score, Logo } from "../";
+import { Score, Logo } from "components";
 
-function Header({ score }) {
+function Header({ setModal }) {
   return (
     <div className={style["root"]}>
-      <Logo />
-      <Score score={score} />
+      <Logo setModal={setModal} />
+      <Score />
     </div>
   );
 }

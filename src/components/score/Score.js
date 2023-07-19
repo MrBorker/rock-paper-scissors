@@ -1,6 +1,6 @@
 import style from "./Score.module.css";
 import { useContext } from "react";
-import { ScoreContext } from "../../context";
+import { ScoreContext } from "context";
 
 function Score() {
   const { score } = useContext(ScoreContext);

@@ -6,3 +6,4 @@ export { Score } from "./score";
 export { Logo } from "./logo";
 export { Card } from "./card";
 export { Result } from "./result";
+export { Shadow } from "./shadow";

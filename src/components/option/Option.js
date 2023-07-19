@@ -2,7 +2,7 @@ import styles from "./Option.module.css";
 
 function Option({ theme, size, state, onClick }) {
   const handleClick = () => {
-    onClick && onClick(theme);
+    onClick && onClick(theme); // Check onClick to be defined, because there are "no click" Option variations
   };
 
   return (
@@ -10,7 +10,7 @@ function Option({ theme, size, state, onClick }) {
       className={`${styles["btn"]} ${styles[theme]} ${styles[size]} ${
         styles[state] || ""
       }`}
-      onClick={handleClick}
+      onClick={handleClick} // Can't do the check here, because onClick should always be a function
     ></button>
   );
 }

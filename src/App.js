@@ -1,21 +1,32 @@
 import "./reset.css";
 import "./App.css";
-import { Header, GameArea } from "./components";
+import { Header, GameArea, Modal, Shadow } from "components";
+import ScoreProvider from "context";
 import { useState } from "react";
-import { ScoreContext } from "./context";
 
 function App() {
-  const [score, setScore] = useState(0);
+  const [modal, setModal] = useState(0);
+
+  const handleClick = () => {
+    setModal(1);
+  };
 
   return (
-    <ScoreContext.Provider value={{ score }}>
+    <ScoreProvider>
       <div className="root">
         <div className="content-wrapper">
-          <Header />
-          <GameArea setScore={setScore} score={score} />
+          <Header setModal={setModal} />
+          <GameArea />
+          <div className="rules">
+            <button className="rules-btn" onClick={handleClick}>
+              rules
+            </button>
+          </div>
         </div>
+        {modal ? <Modal setModal={setModal} /> : ""}
+        {modal ? <Shadow setModal={setModal} /> : ""}
       </div>
-    </ScoreContext.Provider>
+    </ScoreProvider>
   );
 }
 

@@ -1,7 +1,7 @@
 const themes = {
-  type: { rock: "rock", paper: "paper", scissors: "scissors" },
+  actionType: { rock: "rock", paper: "paper", scissors: "scissors" },
   size: { huge: "huge", normal: "normal" },
-  state: { waiting: "waiting", winner: "winner" },
+  state: { winner: "winner", modal: "modal" },
 };
 
 const rules = {

@@ -6,11 +6,11 @@ function Result({ setPicked, winner }) {
   };
 
   return (
-    <div className={style["result-container"]}>
-      <h2 className={style["result-title"]}>
+    <div className={style["root"]}>
+      <h2 className={style["title"]}>
         {winner === -1 ? "draw" : winner ? "you win" : "you lost"}
       </h2>
-      <button className={style["result-button"]} onClick={handleClick}>
+      <button className={style["button"]} onClick={handleClick}>
         play again
       </button>
     </div>

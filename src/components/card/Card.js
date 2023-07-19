@@ -1,14 +1,14 @@
-import style from "./Card.module.css";
-import { Option } from "../";
-import { themes } from "../../constants/rootConstants";
+import styles from "./Card.module.css";
+import { Option } from "components";
+import { themes } from "constants/gameParams";
 
-const { type, size, state } = themes;
+const { actionType, size } = themes;
 
 function Card({ picked, text, state }) {
   return (
-    <div className={style["picked-card"]}>
-      <h3 className={style["picked-title"]}>{text}</h3>
-      <Option theme={type[picked]} size={size.huge} state={state} />
+    <div className={styles["picked-card"]}>
+      <h3 className={styles["picked-title"]}>{text}</h3>
+      <Option theme={actionType[picked]} size={size.huge} state={state} />
     </div>
   );
 }
