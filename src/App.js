@@ -1,8 +1,10 @@
+import { useState } from "react";
+
+import ScoreProvider from "context";
+import { Header, GameArea, Modal, Shadow } from "components";
+
 import "./reset.css";
 import "./App.css";
-import { Header, GameArea, Modal, Shadow } from "components";
-import ScoreProvider from "context";
-import { useState } from "react";
 
 function App() {
   const [modal, setModal] = useState(0);
